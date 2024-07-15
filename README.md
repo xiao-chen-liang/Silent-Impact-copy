@@ -14,13 +14,13 @@ The dataset is categorized into two main components: **Classification** and **De
 The dataset can be downloaded [here](https://drive.google.com/drive/folders/1CUFZEkLSs6bZLg77lnytApPgXcVlJlAf?usp=sharing).
 Place the 4 `pkl` files in the `data` folder so that it looks like this:
 ```
-Silent-Impact
-    - data
-        - Classification_Dominant.pkl
-        - Classification_Passive.pkl
-        - Detection_Dominant.pkl
-        - Detection_Passive.pkl
-        - Participant_Information
+Silent-Impact/
+    data/
+        Classification_Dominant.pkl
+        Classification_Passive.pkl
+        Detection_Dominant.pkl
+        Detection_Passive.pkl
+        Participant_Information
     README.md
     ...
 ```
