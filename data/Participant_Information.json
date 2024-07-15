@@ -1,0 +1,142 @@
+{
+    "1": {
+        "age": 19,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 0.5,
+        "backhand": "two-handed"
+    },
+    "2": {
+        "age": 20,
+        "gender": "female",
+        "dominant": "left",
+        "experience": 2,
+        "backhand": "two-handed"
+    },
+    "3": {
+        "age": 22,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 2,
+        "backhand": "two-handed"
+    },
+    "4": {
+        "age": 23,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 8,
+        "backhand": "one-handed"
+    },
+    "5": {
+        "age": 25,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 1,
+        "backhand": "two-handed"
+    },
+    "6": {
+        "age": 29,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 1.5,
+        "backhand": "two-handed"
+    },
+    "7": {
+        "age": 29,
+        "gender": "female",
+        "dominant": "right",
+        "experience": 11,
+        "backhand": "two-handed"
+    },
+    "8": {
+        "age": 20,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 2,
+        "backhand": "two-handed"
+    },
+    "9": {
+        "age": 20,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 7,
+        "backhand": "one-handed"
+    },
+    "10": {
+        "age": 21,
+        "gender": "male",
+        "dominant": "left",
+        "experience": 2.5,
+        "backhand": "two-handed"
+    },
+    "11": {
+        "age": 22,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 1.5,
+        "backhand": "two-handed"
+    },
+    "12": {
+        "age": 22,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 4,
+        "backhand": "two-handed"
+    },
+    "13": {
+        "age": 22,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 6,
+        "backhand": "two-handed"
+    },
+    "14": {
+        "age": 24,
+        "gender": "male",
+        "dominant": "left",
+        "experience": 10,
+        "backhand": "two-handed"
+    },
+    "15": {
+        "age": 25,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 1.5,
+        "backhand": "two-handed"
+    },
+    "16": {
+        "age": 27,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 4,
+        "backhand": "one-handed"
+    },
+    "17": {
+        "age": 27,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 5,
+        "backhand": "two-handed"
+    },
+    "18": {
+        "age": 28,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 6,
+        "backhand": "one-handed"
+    },
+    "19": {
+        "age": 31,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 4,
+        "backhand": "two-handed"
+    },
+    "20": {
+        "age": 38,
+        "gender": "male",
+        "dominant": "right",
+        "experience": 13,
+        "backhand": "two-handed"
+    }
+}
