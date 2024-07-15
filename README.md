@@ -20,7 +20,7 @@ Silent-Impact/
         Classification_Passive.pkl
         Detection_Dominant.pkl
         Detection_Passive.pkl
-        Participant_Information
+        Participant_Information.json
     README.md
     ...
 ```
