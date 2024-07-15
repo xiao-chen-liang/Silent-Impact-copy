@@ -1,0 +1,2 @@
+# ignore data pickle files
+data/*.pkl
