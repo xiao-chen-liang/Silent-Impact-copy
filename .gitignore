@@ -1,2 +1,6 @@
 # ignore data pickle files
 data/*.pkl
+
+# ignore generated files from training
+checkpoints/*
+logs/*

@@ -1,6 +1,8 @@
 # Silent Impact
 
-This is the official repository of the paper "Silent Impact: Tracking Tennis Shots from the Passive Arm"
+This is the official repository of the paper
+\
+**"Silent Impact: Tracking Tennis Shots from the Passive Arm"**
 
 https://doi.org/10.1145/3654777.3676403
 
@@ -87,13 +89,25 @@ The detection array provides sensor readings from tennis sessions, including ral
 Demographics and tennis characteristics of each subject is provided in the `Participant_Information.json` file.
 
 ## Code
-### Dependencies
+Tested with python==3.7.16, pytorch==1.13.0, cudatoolkit=11.6
 
-### Plot data
+### Dependencies
+```
+conda create -n silentimpact python=3.7
+conda activate silentimpact
+conda install pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.6 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
 
 ### Classification training
+```
+python train_classification.py --arm p --name test --split 1 --gpu 0
+```
 
 ### Detection training
+```
+python train_detection.py --arm p --name test --split 1 --gpu 0
+```
 
 
 ## Citation
