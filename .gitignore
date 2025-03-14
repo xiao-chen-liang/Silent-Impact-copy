@@ -4,3 +4,7 @@ data/*.pkl
 # ignore generated files from training
 checkpoints/*
 logs/*
+
+# ignore ide files
+.idea
+.vscode
