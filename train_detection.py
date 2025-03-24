@@ -95,7 +95,7 @@ def main():
 
 def load_pickle(path):
     # Load data from pickle file
-    with open(data_path, 'rb') as f:
+    with open(path, 'rb') as f:
         data = pkl.load(f)
 
     num_items, max_seq_len, _ = data.shape
