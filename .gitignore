@@ -8,3 +8,5 @@ logs/*
 # ignore ide files
 .idea
 .vscode
+extraction/raw_data
+extraction/pd
