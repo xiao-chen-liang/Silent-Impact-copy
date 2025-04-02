@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--arm', default='p')
 parser.add_argument('--name', default='test')
 parser.add_argument('--split', default='1')
-parser.add_argument('--gpu', default='1')
+parser.add_argument('--gpu', default='2')
 args = parser.parse_args()
 
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
@@ -36,7 +36,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 if args.arm == 'p':
-    data_path = "data/combined_numpy_1.pkl"
+    data_path = "data/combined_numpy_1_2.pkl"
 elif args.arm == 'd':
     data_path = "data/Classification_Dominant.pkl"
 else:
@@ -55,11 +55,11 @@ os.makedirs(log_dir, exist_ok=True)
 os.makedirs(checkpoint_dir, exist_ok=True)
 
 
-num_labels = 3
+num_labels = 4
 num_channels = 6
 seq_len = 300
-batch_size = 3
-num_epochs = 20
+batch_size = 16
+num_epochs = 100
 learning_rate = 1e-4
 
 
