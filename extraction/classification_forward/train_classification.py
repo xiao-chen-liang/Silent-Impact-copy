@@ -36,7 +36,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 if args.arm == 'p':
-    data_path = "data/combined_numpy_final.pkl"
+    data_path = "data/combined_numpy_1.pkl"
 elif args.arm == 'd':
     data_path = "data/Classification_Dominant.pkl"
 else:
@@ -146,10 +146,12 @@ def load_split(split):
 
     val_group = splits[split][0]
     test_group = splits[split][1]
+    train_group = splits[split][2]
 
     val_subjects = groups[str(val_group)]
     test_subjects = groups[str(test_group)]
-    train_subjects = [x for x in range(1, 4) if x not in val_subjects and x not in test_subjects]
+    train_subjects = groups[str(train_group)]
+    # train_subjects = [x for x in range(1, 4) if x not in val_subjects and x not in test_subjects]
 
     return train_subjects, val_subjects, test_subjects
 
