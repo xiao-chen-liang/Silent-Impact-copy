@@ -36,7 +36,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 if args.arm == 'p':
-    data_path = "data/combined_numpy_1_2.pkl"
+    data_path = "data/combined_numpy_1_2_merge.pkl"
 elif args.arm == 'd':
     data_path = "data/Classification_Dominant.pkl"
 else:
@@ -56,7 +56,7 @@ os.makedirs(checkpoint_dir, exist_ok=True)
 
 
 num_labels = 4
-num_channels = 6
+num_channels = 12
 seq_len = 300
 batch_size = 16
 num_epochs = 100
