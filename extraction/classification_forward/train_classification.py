@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--arm', default='p')
 parser.add_argument('--name', default='test')
 parser.add_argument('--split', default='1')
-parser.add_argument('--gpu', default='2')
+parser.add_argument('--gpu', default='1')
 args = parser.parse_args()
 
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
@@ -36,7 +36,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 if args.arm == 'p':
-    data_path = "data/combined_numpy_1_2_merge.pkl"
+    data_path = "data/combined_numpy_1_2_3_4_5.pkl"
 elif args.arm == 'd':
     data_path = "data/Classification_Dominant.pkl"
 else:
@@ -56,9 +56,9 @@ os.makedirs(checkpoint_dir, exist_ok=True)
 
 
 num_labels = 4
-num_channels = 12
+num_channels = 6
 seq_len = 300
-batch_size = 16
+batch_size = 64
 num_epochs = 100
 learning_rate = 1e-4
 
@@ -76,6 +76,9 @@ def main():
     test_dataloader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=4)
 
     with open(log_path, 'w') as f:
+        f.write(f'train_subjects: {train_subjects}\n')
+        f.write(f'val_subjects: {val_subjects}\n')
+        f.write(f'test_subjects: {test_subjects}\n')
         f.write(f"TRAINING\n")
     best_epoch = train(train_dataloader, val_dataloader)
 
@@ -85,6 +88,12 @@ def main():
     with open(log_path, 'a') as f:
         f.write(f"Test Acc: {test_acc:.4f}\n")
         f.write(f"{test_conf}\n")
+
+    # print all the logs
+    with open(log_path, 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            print(line.strip())
 
 
 def load_pickle():
@@ -144,14 +153,19 @@ def load_split(split):
     groups = dic["groups"]
     splits = dic["splits"]
 
-    val_group = splits[split][0]
-    test_group = splits[split][1]
-    train_group = splits[split][2]
+    # val_group = splits[split][0]
+    # test_group = splits[split][1]
+    #
+    # val_subjects = groups[str(val_group)]
+    # test_subjects = groups[str(test_group)]
+    # # train_subjects = groups[str(train_group)]
+    # train_subjects = [x for x in range(1, 20) if x not in val_subjects and x not in test_subjects]
 
-    val_subjects = groups[str(val_group)]
+
+    test_group = splits[split][0]
     test_subjects = groups[str(test_group)]
-    train_subjects = groups[str(train_group)]
-    # train_subjects = [x for x in range(1, 4) if x not in val_subjects and x not in test_subjects]
+    # train_subjects = groups[str(train_group)]
+    val_subjects, train_subjects = [x for x in range(1, 21) if  x not in test_subjects]
 
     return train_subjects, val_subjects, test_subjects
 
